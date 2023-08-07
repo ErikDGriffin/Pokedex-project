@@ -1,0 +1,72 @@
+
+
+.container {
+  border: 2px solid;
+  border-radius: 10px;
+  padding: 10px;
+  margin-left: 10px;
+  margin-bottom: 100px;
+  background-color: rgba(245, 245, 245, 0.328)
+  
+}
+
+body{
+  background-image: url('https://cdn.wallpapersafari.com/46/7/CHOrxD.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  height: 100%;
+  
+}
+
+.input {
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 200px;
+  color: blue;
+}
+
+.filter-section {
+  margin-right: 20px;
+  text-align: center;
+  
+}
+
+.filter-header {
+  font-size: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+ 
+}
+
+.filter-label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.pokemon-list {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+   
+}
+
+.pokemon-item {
+  margin-bottom: 10px;
+  padding: 10px;
+  margin-left: 20px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  color: red;
+  
+}
+
+.app-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 25%;
+
+}
