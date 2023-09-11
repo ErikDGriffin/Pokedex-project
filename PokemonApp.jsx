@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import './App.css';
+import './PokemonApp.css';
 
 const PokemonList = () => {
   const [pokemonData, setPokemonData] = useState([]);
   const [searchText, setSearchText] = useState('');
   const [selectedTypes, setSelectedTypes] = useState([]);
-  const [selectedWeaknesses, setSelectedWeaknesses] = useState([]);
+  const [selectedWeaknesses, setSelectedWeaknesses] = useState([]); 
 
   useEffect(() => {
     fetch('https://raw.githubusercontent.com/Biuni/PokemonGO-Pokedex/master/pokedex.json')
@@ -94,9 +94,9 @@ const PokemonList = () => {
   );
 };
 
-const PokemonDetails = ({ pokemon }) => {
+const SelectedPokemon = ({ pokemon }) => {
   return (
-    <div>
+    <div className="selected-pokemon">
       <h2>{pokemon.name}</h2>
       <p>
         <strong>Number:</strong> {pokemon.num}
@@ -119,11 +119,11 @@ const App = () => {
   };
 
   return (
-    <div classname="background-image">
+    <div className="background-image">
       <div className="app-container">
         <h1>Pokemon List</h1>
         <PokemonList onSelectPokemon={handlePokemonClick} /> 
-        {/* {selectedPokemon && <PokemonDetails pokemon={selectedPokemon} />} */}
+        {selectedPokemon && <SelectedPokemon pokemon={selectedPokemon} />} 
       </div>
     </div>
   );
